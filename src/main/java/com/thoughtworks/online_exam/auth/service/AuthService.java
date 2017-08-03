@@ -82,11 +82,16 @@ public class AuthService {
     public AuthResult signin(AuthInfo account) {
         checkInfoIntegrality(account);
 
+        UserModel userModel = checkAccount(account);
+        return createResult(userModel.getRole());
+    }
+
+    private UserModel checkAccount(AuthInfo account) {
         UserModel userModel = userRepository.
                 findUserByEmailAndPassword(account.getEmail(), account.getPassword());
         if(userModel == null){
             throw new WrongAccountException();
         }
-        return createResult(userModel.getRole());
+        return userModel;
     }
 }

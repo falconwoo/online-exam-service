@@ -5,6 +5,7 @@ import com.thoughtworks.online_exam.auth.entity.AuthInfo;
 import com.thoughtworks.online_exam.auth.service.AuthService;
 import com.thoughtworks.online_exam.common.constant.EnvProfile;
 import com.thoughtworks.online_exam.common.exception.InvalidEmailException;
+import com.thoughtworks.online_exam.common.exception.UnsupportedEmailException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,20 @@ public class AuthServiceFunctionalTest {
 
         // when
         authService.signup(authInfoWithInvalidEmail);
+
+        // then throw exception
+    }
+
+    @Test(expected = UnsupportedEmailException.class)
+    public void should_throw_exception_when_signup_with_unsupported_email() {
+        // given
+        AuthInfo authInfoWithUnsupportedEmail = new AuthInfo(){{
+            setEmail("abc@ecust.com");
+            setPassword("passwd");
+        }};
+
+        // when
+        authService.signup(authInfoWithUnsupportedEmail);
 
         // then throw exception
     }

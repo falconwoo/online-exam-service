@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.invoke.WrongMethodTypeException;
 import java.util.Date;
 import java.util.UUID;
 
@@ -76,5 +77,15 @@ public class AuthService {
         if(authInfo.getPassword() == null){
             throw new MissingPasswordException();
         }
+    }
+
+    public AuthResult signin(AuthInfo wrongAccount) {
+
+        UserModel userModel = userRepository.
+                findUserByEmailAndPassword(wrongAccount.getEmail(), wrongAccount.getPassword());
+        if(userModel == null){
+            throw new WrongAccountException();
+        }
+        return createResult(userModel.getRole());
     }
 }

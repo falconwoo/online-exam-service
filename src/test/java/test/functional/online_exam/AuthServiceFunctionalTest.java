@@ -1,8 +1,11 @@
 package test.functional.online_exam;
 
 import com.thoughtworks.online_exam.OnlineExamApplication;
+import com.thoughtworks.online_exam.auth.UserMapper;
 import com.thoughtworks.online_exam.auth.entity.AuthInfo;
 import com.thoughtworks.online_exam.auth.entity.AuthResult;
+import com.thoughtworks.online_exam.auth.model.UserModel;
+import com.thoughtworks.online_exam.auth.repository.UserRepository;
 import com.thoughtworks.online_exam.auth.service.AuthService;
 import com.thoughtworks.online_exam.common.constant.EnvProfile;
 import com.thoughtworks.online_exam.common.exception.*;
@@ -15,6 +18,8 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -26,6 +31,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AuthServiceFunctionalTest {
     @Autowired
     private AuthService authService;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private UserMapper userMapper;
 
     @Test(expected = InvalidEmailException.class)
     public void should_throw_exception_when_signup_with_invalid_email() {
@@ -112,5 +123,26 @@ public class AuthServiceFunctionalTest {
         // then throw exception
     }
 
+    @Test(expected = WrongAccountException.class)
+    public void should_throw_exception_when_signin_with_wrong_account() {
+        // given
+        AuthInfo correctAccount = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("123456");
+        }};
+        AuthInfo wrongAccount = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("55555");
+        }};
+
+        // when
+        UserModel model = userMapper.map(correctAccount, UserModel.class);
+        model.setRole("2");
+        model.setTimeCreated(new Date());
+        userRepository.saveAndFlush(model);
+        authService.signin(wrongAccount);
+
+        // then throw exception
+    }
 
 }

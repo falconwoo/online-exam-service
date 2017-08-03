@@ -79,10 +79,11 @@ public class AuthService {
         }
     }
 
-    public AuthResult signin(AuthInfo wrongAccount) {
+    public AuthResult signin(AuthInfo account) {
+        checkInfoIntegrality(account);
 
         UserModel userModel = userRepository.
-                findUserByEmailAndPassword(wrongAccount.getEmail(), wrongAccount.getPassword());
+                findUserByEmailAndPassword(account.getEmail(), account.getPassword());
         if(userModel == null){
             throw new WrongAccountException();
         }

@@ -145,4 +145,29 @@ public class AuthServiceFunctionalTest {
         // then throw exception
     }
 
+    @Test(expected = MissingEmailException.class)
+    public void should_throw_exception_when_signin_missing_email() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setPassword("passwd");
+        }};
+
+        // when
+        authService.signin(authInfo);
+
+        // then throw exception
+    }
+
+    @Test(expected = MissingPasswordException.class)
+    public void should_throw_exception_when_signin_missing_password() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+        }};
+
+        // when
+        authService.signin(authInfo);
+
+        // then throw exception
+    }
 }

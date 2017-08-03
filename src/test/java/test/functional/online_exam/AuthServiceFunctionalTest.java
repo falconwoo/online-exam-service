@@ -2,6 +2,7 @@ package test.functional.online_exam;
 
 import com.thoughtworks.online_exam.OnlineExamApplication;
 import com.thoughtworks.online_exam.auth.entity.AuthInfo;
+import com.thoughtworks.online_exam.auth.entity.AuthResult;
 import com.thoughtworks.online_exam.auth.service.AuthService;
 import com.thoughtworks.online_exam.common.constant.EnvProfile;
 import com.thoughtworks.online_exam.common.exception.InvalidEmailException;
@@ -15,6 +16,8 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -67,5 +70,21 @@ public class AuthServiceFunctionalTest {
         authService.signup(authInfo);
 
         // then throw exception
+    }
+
+    @Test
+    public void should_return_role_2_and_token_when_signup_succes(){
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("passwd");
+        }};
+
+        // when
+        AuthResult authResult = authService.signup(authInfo);
+
+        // then
+        assertThat(authResult.getRole()).isEqualTo("2");
+        assertThat(authResult.getToken()).isNotNull().isNotEmpty();
     }
 }

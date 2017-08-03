@@ -5,9 +5,7 @@ import com.thoughtworks.online_exam.auth.entity.AuthInfo;
 import com.thoughtworks.online_exam.auth.entity.AuthResult;
 import com.thoughtworks.online_exam.auth.service.AuthService;
 import com.thoughtworks.online_exam.common.constant.EnvProfile;
-import com.thoughtworks.online_exam.common.exception.InvalidEmailException;
-import com.thoughtworks.online_exam.common.exception.RegisteredEmailException;
-import com.thoughtworks.online_exam.common.exception.UnsupportedEmailException;
+import com.thoughtworks.online_exam.common.exception.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,4 +85,32 @@ public class AuthServiceFunctionalTest {
         assertThat(authResult.getRole()).isEqualTo("2");
         assertThat(authResult.getToken()).isNotNull().isNotEmpty();
     }
+
+    @Test(expected = MissingEmailException.class)
+    public void should_throw_exception_when_signup_missing_email() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setPassword("passwd");
+        }};
+
+        // when
+        authService.signup(authInfo);
+
+        // then throw exception
+    }
+
+    @Test(expected = MissingPasswordException.class)
+    public void should_throw_exception_when_signup_missing_password() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+        }};
+
+        // when
+        authService.signup(authInfo);
+
+        // then throw exception
+    }
+
+
 }

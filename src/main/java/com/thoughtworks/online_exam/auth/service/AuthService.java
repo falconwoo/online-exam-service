@@ -5,9 +5,7 @@ import com.thoughtworks.online_exam.auth.entity.AuthInfo;
 import com.thoughtworks.online_exam.auth.entity.AuthResult;
 import com.thoughtworks.online_exam.auth.model.UserModel;
 import com.thoughtworks.online_exam.auth.repository.UserRepository;
-import com.thoughtworks.online_exam.common.exception.InvalidEmailException;
-import com.thoughtworks.online_exam.common.exception.RegisteredEmailException;
-import com.thoughtworks.online_exam.common.exception.UnsupportedEmailException;
+import com.thoughtworks.online_exam.common.exception.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +24,15 @@ public class AuthService {
 
     public AuthResult signup(AuthInfo authInfo) {
         String email = authInfo.getEmail();
+
+        if(email == null){
+            throw new MissingEmailException();
+        }
+
+        if(authInfo.getPassword() == null){
+            throw new MissingPasswordException();
+        }
+
         if(!email.contains("@")) {
             throw new InvalidEmailException();
         }

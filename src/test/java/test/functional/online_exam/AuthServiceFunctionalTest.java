@@ -170,4 +170,44 @@ public class AuthServiceFunctionalTest {
 
         // then throw exception
     }
+
+    @Test
+    public void should_return_role_2_and_token_when_student_signin_succes(){
+        // given
+        AuthInfo studentAccount = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("passwd");
+        }};
+
+        // when
+        UserModel model = userMapper.map(studentAccount, UserModel.class);
+        model.setRole("2");
+        model.setTimeCreated(new Date());
+        userRepository.saveAndFlush(model);
+        AuthResult authResult = authService.signin(studentAccount);
+
+        // then
+        assertThat(authResult.getRole()).isEqualTo("2");
+        assertThat(authResult.getToken()).isNotNull().isNotEmpty();
+    }
+
+    @Test
+    public void should_return_role_1_and_token_when_teacher_signin_succes(){
+        // given
+        AuthInfo teacherAccount = new AuthInfo(){{
+            setEmail("admin@siwow.edu.cn");
+            setPassword("111111");
+        }};
+
+        // when
+        UserModel model = userMapper.map(teacherAccount, UserModel.class);
+        model.setRole("1");
+        model.setTimeCreated(new Date());
+        userRepository.saveAndFlush(model);
+        AuthResult authResult = authService.signin(teacherAccount);
+
+        // then
+        assertThat(authResult.getRole()).isEqualTo("1");
+        assertThat(authResult.getToken()).isNotNull().isNotEmpty();
+    }
 }

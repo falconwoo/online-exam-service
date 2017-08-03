@@ -23,37 +23,58 @@ public class AuthService {
     private UserRepository userRepository;
 
     public AuthResult signup(AuthInfo authInfo) {
-        String email = authInfo.getEmail();
+        checkInfoIntegrality(authInfo);
+        checkEmailFormat(authInfo.getEmail());
+        checkEmailSupportList(authInfo.getEmail());
+        UserModel model = createUser(authInfo);
+        return createResult(model.getRole());
+    }
 
-        if(email == null){
+    private AuthResult createResult(String role) {
+        return new AuthResult(){{
+            setRole(role);
+            setToken(UUID.randomUUID().toString().replaceAll("-",""));
+        }};
+    }
+
+    private UserModel createUser(AuthInfo authInfo) {
+        checkDuplicateEmail(authInfo.getEmail());
+        return saveAuthInfo(authInfo);
+    }
+
+    private UserModel saveAuthInfo(AuthInfo authInfo) {
+        UserModel model = userMapper.map(authInfo, UserModel.class);
+        model.setRole("2");
+        model.setTimeCreated(new Date());
+        userRepository.saveAndFlush(model);
+        return model;
+    }
+
+    private void checkDuplicateEmail(String email) {
+        if(userRepository.findUserByEmail(email) != null) {
+            throw new RegisteredEmailException();
+        }
+    }
+
+    private void checkEmailSupportList(String email) {
+        if(!email.contains("@mail.tsinghua.edu.cn")){
+            throw new UnsupportedEmailException();
+        }
+    }
+
+    private void checkEmailFormat(String email) {
+        if(!email.contains("@")) {
+            throw new InvalidEmailException();
+        }
+    }
+
+    private void checkInfoIntegrality(AuthInfo authInfo) {
+        if(authInfo.getEmail() == null){
             throw new MissingEmailException();
         }
 
         if(authInfo.getPassword() == null){
             throw new MissingPasswordException();
         }
-
-        if(!email.contains("@")) {
-            throw new InvalidEmailException();
-        }
-
-        if(!email.contains("@mail.tsinghua.edu.cn")){
-            throw new UnsupportedEmailException();
-        }
-
-        if(userRepository.findUserByEmail(email) != null) {
-            throw new RegisteredEmailException();
-        }
-
-        UserModel model = userMapper.map(authInfo, UserModel.class);
-        model.setRole("2");
-        model.setTimeCreated(new Date());
-        userRepository.saveAndFlush(model);
-
-        String token = UUID.randomUUID().toString().replaceAll("-","");
-        return new AuthResult(){{
-            setRole(model.getRole());
-            setToken(token);
-        }};
     }
 }

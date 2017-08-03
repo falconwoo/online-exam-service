@@ -5,6 +5,7 @@ import com.thoughtworks.online_exam.auth.entity.AuthInfo;
 import com.thoughtworks.online_exam.auth.service.AuthService;
 import com.thoughtworks.online_exam.common.constant.EnvProfile;
 import com.thoughtworks.online_exam.common.exception.InvalidEmailException;
+import com.thoughtworks.online_exam.common.exception.RegisteredEmailException;
 import com.thoughtworks.online_exam.common.exception.UnsupportedEmailException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,6 +50,21 @@ public class AuthServiceFunctionalTest {
 
         // when
         authService.signup(authInfoWithUnsupportedEmail);
+
+        // then throw exception
+    }
+
+    @Test(expected = RegisteredEmailException.class)
+    public void should_throw_exception_when_signup_repeatly_with_same_email() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("passwd");
+        }};
+
+        // when
+        authService.signup(authInfo);
+        authService.signup(authInfo);
 
         // then throw exception
     }

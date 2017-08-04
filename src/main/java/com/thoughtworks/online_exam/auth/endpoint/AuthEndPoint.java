@@ -41,7 +41,7 @@ public class AuthEndPoint {
     @POST
     public Response signup(AuthInfo authInfo) {
         AuthResult authResult = authService.signup(authInfo);
-        return Response.ok().entity(authResult).build();
+        return Response.ok().entity(authResult.toJson()).build();
     }
 
     @Path("/signin")
@@ -52,6 +52,6 @@ public class AuthEndPoint {
     @POST
     public Response signin(AuthInfo authInfo) {
         AuthResult authResult = authService.signin(authInfo);
-        return Response.ok().entity(authResult).build();
+        return Response.ok().entity(authResult.toJson()).build();
     }
 }

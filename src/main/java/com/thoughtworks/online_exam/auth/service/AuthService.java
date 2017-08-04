@@ -33,6 +33,7 @@ public class AuthService {
 
     private AuthResult createResult(String role) {
         return new AuthResult(){{
+            setStatusCode("SUCCESS");
             setRole(role);
             setToken(UUID.randomUUID().toString().replaceAll("-",""));
         }};

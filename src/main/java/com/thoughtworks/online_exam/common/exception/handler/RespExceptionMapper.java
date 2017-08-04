@@ -21,7 +21,7 @@ public class RespExceptionMapper implements ExceptionMapper<BaseRespException> {
         LOG.warn("ResponseException with status: " + exception.getStatus());
         LOG.warn(fullStackTrace);
 
-        return Response.status(exception.getStatus())
+        return Response.status(Response.Status.OK)
                 .entity(new RespEntity(exception.getErrorCode(),
                         exception.getErrorMessage()).toJson())
                 .type(APPLICATION_JSON_TYPE)

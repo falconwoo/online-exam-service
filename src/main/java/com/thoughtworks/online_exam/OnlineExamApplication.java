@@ -11,4 +11,5 @@ public class OnlineExamApplication {
             .bannerMode(Banner.Mode.OFF)
             .run(args);
     }
+
 }

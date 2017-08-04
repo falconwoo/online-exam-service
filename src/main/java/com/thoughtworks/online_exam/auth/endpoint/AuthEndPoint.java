@@ -13,6 +13,8 @@ import io.swagger.annotations.ApiResponses;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
@@ -43,6 +45,7 @@ public class AuthEndPoint {
         AuthResult authResult = authService.signup(authInfo);
         return Response.ok().entity(authResult.toJson()).build();
     }
+
 
     @Path("/signin")
     @ApiOperation(value = "Sign in", response = AuthResult.class)

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.7">
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/JerseyConfig.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/OnlineExamApplication.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="6" column="8" severity="error" message="Unused import - org.springframework.context.annotation.Bean." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="error" message="Unused import - org.springframework.web.servlet.config.annotation.CorsRegistry." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="8" column="8" severity="error" message="Unused import - org.springframework.web.servlet.config.annotation.WebMvcConfigurer." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="8" severity="error" message="Unused import - org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/UserMapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/dao/UserDao.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.dao&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/endpoint/AuthEndPoint.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.endpoint&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="6" column="8" severity="error" message="Unused import - com.thoughtworks.online_exam.common.exception.BadRequestException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="error" message="Unused import - com.thoughtworks.online_exam.product.entity.Product." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="8" column="8" severity="error" message="Unused import - com.thoughtworks.online_exam.product.service.ProductService." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="13" column="8" severity="error" message="Unused import - org.apache.commons.lang.StringUtils." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="16" column="8" severity="error" message="Unused import - org.springframework.web.bind.annotation.CrossOrigin." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="17" column="8" severity="error" message="Unused import - org.springframework.web.bind.annotation.RequestMethod." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="20" column="8" severity="error" message="Unused import - javax.ws.rs.core.Context." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="23" column="8" severity="error" message="Unused import - javax.ws.rs.core.UriInfo." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="24" column="8" severity="error" message="Unused import - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="25" column="8" severity="error" message="Unused import - java.util.List." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="26" column="8" severity="error" message="Unused import - java.util.stream.Collectors." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="27" column="8" severity="error" message="Unused import - java.util.stream.Stream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/entity/AuthInfo.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.entity&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/entity/AuthResult.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.entity&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/model/UserModel.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.model&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/repository/UserRepository.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.repository&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/auth/service/AuthService.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.auth.service&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="13" column="8" severity="error" message="Unused import - java.lang.invoke.WrongMethodTypeException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="38" column="66" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/Loggable.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/MapperBase.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/constant/DefaultValues.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.constant&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/constant/EnvProfile.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.constant&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/BadRequestException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/BaseRespException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/BaseResponseException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/ErrorCode.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/InvalidEmailException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="7" column="43" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/MissingEmailException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/MissingPasswordException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/NotFoundException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/RegisteredEmailException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/UnsupportedEmailException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="7" column="43" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="7" column="71" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/WrongAccountException.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="7" column="43" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="7" column="67" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/handler/ErrorEntity.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception.handler&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/handler/RespEntity.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception.handler&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="9" column="8" severity="error" message="Unused import - java.util.Map." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/handler/RespExceptionMapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception.handler&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="4" column="8" severity="error" message="Unused import - com.thoughtworks.online_exam.common.exception.BaseResponseException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/handler/ResponseExceptionMapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception.handler&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="25" column="50" severity="error" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/exception/handler/UnhandledExceptionMapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.exception.handler&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/jpa/BaseDaoWrapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.jpa&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/jpa/EntityBaseModel.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.jpa&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/common/jpa/IdBaseModel.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.common.jpa&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/ProductMapper.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/dao/ProductDao.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.dao&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/endpoint/ProductEndPoint.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.endpoint&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/entity/Product.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.entity&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/model/ProductModel.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.model&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/repository/ProductRepository.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.repository&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="/Users/xhwu/tmp/online-exam-service/src/main/java/com/thoughtworks/online_exam/product/service/ProductService.java">
+<error line="1" column="9" severity="error" message="Name &apos;com.thoughtworks.online_exam.product.service&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+</checkstyle>

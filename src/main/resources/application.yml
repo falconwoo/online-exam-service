@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost/online_exam
+    url: jdbc:mysql://10.204.22.21/online_exam
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -18,7 +18,7 @@ flyway:
   out-of-order: true
   encoding: UTF-8
 
-gaia:
+online_exam:
   jersey:
     access_control_allow_origin: \*
 

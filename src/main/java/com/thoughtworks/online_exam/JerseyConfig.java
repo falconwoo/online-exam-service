@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class JerseyConfig extends ResourceConfig {
     private static final String[] MODULE_PACKAGES = new String[]{
         "com.thoughtworks.online_exam.product.endpoint",
+        "com.thoughtworks.online_exam.auth.endpoint"
     };
 
     public JerseyConfig() {

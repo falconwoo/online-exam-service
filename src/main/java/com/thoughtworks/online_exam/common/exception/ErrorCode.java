@@ -10,7 +10,8 @@ public enum ErrorCode {
     REGISTERED_EMAIL(102),
     MISSING_EMAIL(103),
     MISSING_PASSWORD(104),
-    WRONG_ACCOUNT(105);
+    WRONG_ACCOUNT(105),
+    INVALID_PASSWORD(106);
 
     private final int code;
 
@@ -21,4 +22,5 @@ public enum ErrorCode {
     public int getCode() {
         return code;
     }
+
 }

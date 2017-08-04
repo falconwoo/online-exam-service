@@ -110,6 +110,20 @@ public class AuthServiceFunctionalTest {
         // then throw exception
     }
 
+    @Test(expected = InvalidPasswordException.class)
+    public void should_throw_exception_when_signup_invalid_password() {
+        // given
+        AuthInfo authInfo = new AuthInfo(){{
+            setEmail("aloha@mail.tsinghua.edu.cn");
+            setPassword("123");
+        }};
+
+        // when
+        authService.signup(authInfo);
+
+        // then throw exception
+    }
+
     @Test(expected = MissingPasswordException.class)
     public void should_throw_exception_when_signup_missing_password() {
         // given

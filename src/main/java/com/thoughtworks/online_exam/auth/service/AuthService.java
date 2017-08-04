@@ -26,8 +26,15 @@ public class AuthService {
         checkInfoIntegrality(authInfo);
         checkEmailFormat(authInfo.getEmail());
         checkEmailSupportList(authInfo.getEmail());
+        checkPasswordLength(authInfo.getPassword());
         UserModel model = createUser(authInfo);
         return createResult(model.getRole());
+    }
+
+    private void checkPasswordLength(String password) {
+        if(password.length() != 6){
+            throw new InvalidPasswordException();
+        }
     }
 
     private AuthResult createResult(String role) {
